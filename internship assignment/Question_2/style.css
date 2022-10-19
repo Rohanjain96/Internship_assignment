@@ -1,0 +1,59 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+th,td{
+    padding: 10px;
+}
+
+tr{
+    border: 1px solid rgba(0, 0, 0, 0.177);
+}
+
+thead{
+    background-color: greenyellow;
+}
+.menu{
+   margin-bottom: 10px;    
+   border-collapse: collapse;
+   border: 1px solid black;
+   width:50%;
+   text-align: center;
+
+}
+
+.choices{
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+    justify-content: center;
+    height: 60px;
+    align-items: center;
+}
+.quantitymodifier{
+    margin-right: 10px;
+}
+#selectproduct{
+    margin-right: 20px;
+    height: 30px;
+}
+#selectaddon{
+    margin-right: 20px;
+    height: 30px;
+    width: fit-content;
+}
+
+#listofitembought{
+    margin-bottom: 20px;
+    width: 50%;
+    text-align: center;
+}
+
+#listofitembought tr{
+    border-bottom: 1px solid black ;
+}

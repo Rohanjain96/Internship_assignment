@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Homepage</title>
+</head>
+
+<body>
+    <h1>Menu</h1>
+    <table class="menu">
+        <thead>
+            <tr>
+                <th>Product/Add on</th>
+                <th>Milk</th>
+                <th>Cream</th>
+                <th>Latte</th>
+            </tr>
+        <tbody>
+            <tr>
+                <td>Expresso</td>
+                <td>60</td>
+                <td>75</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Capuccino</td>
+                <td>80</td>
+                <td>90</td>
+                <td>125</td>
+            </tr>
+            <tr>
+                <td>Latte</td>
+                <td>100</td>
+                <td>125</td>
+                <td>150</td>
+            </tr>
+        </tbody>
+        </thead>
+    </table>
+    <div class="choices">
+        <select id="selectproduct" onchange="changedproductvalue()">
+            <option value="defaultselect" selected>Please select product</option>
+            <option value="expresso">Expresso</option>
+            <option value="capuccino">Capuccino</option>
+            <option value="latte">Latte</option>
+        </select>
+        <select id="selectaddon" disabled onchange="changedaddonvalue()">
+            <option value="defaultselect" selected>Please select addon</option>
+            <option value="milk">Milk</option>
+            <option value="cream">Cream</option>
+            <option value="latte">Latte</option>
+        </select>
+        <div class="quantitymodifier">
+            <span>Qty:</span>
+            <button onclick="decrement()">-</button>
+            <span id="quantity"></span>
+            <button onclick="increment()">+</button>
+        </div>
+        <button onclick="addtolist()">Add to list</button>
+    </div>
+
+    <h2>You have added</h2>
+    <table id="listofitembought">
+        <thead>
+            <tr>
+                <th>
+                    Item name
+                </th>
+                <th>
+                    Add on
+                </th>
+                <th>
+                    Quantity
+                </th>
+                <th>
+                    Total price
+                </th>
+            </tr>
+        </thead>
+        <tbody id="yourboughtitems">
+        </tbody>
+    </table>
+    <button onclick="generatereceipt()">Generate Receipt</button>
+    <script src="index.js"></script>
+</body>
+
+</html>
